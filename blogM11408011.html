@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流行音樂大解密 | 音樂與時代的共鳴</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f4ff',
+                            100: '#e0e9fe',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            900: '#1e1b4b',
+                        },
+                        accent: '#f43f5e',
+                        surface: '#0f172a',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #020617;
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-marker {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .section-marker::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #6366f1, transparent);
+            border-radius: 2px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden py-20 px-6">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full -z-10">
+            <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-brand-600/20 blur-[120px] rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent/10 blur-[120px] rounded-full animate-pulse-slow" style="animation-delay: 2s"></div>
+        </div>
+
+        <div class="max-w-5xl w-full mx-auto relative z-10 text-center">
+            <div class="inline-block px-4 py-1.5 mb-8 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-100 text-sm font-semibold tracking-wider uppercase animate-fade-in">
+                學號：M11408011
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight tracking-tight">
+                🎵 流行音樂<span class="gradient-text">大解密</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-slate-400 font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                從洗腦神曲到人工智慧，我們追的是音樂還是寂寞？
+            </p>
+
+            <!-- Banner Image -->
+            <div class="relative group mx-auto max-w-4xl rounded-3xl overflow-hidden shadow-2xl shadow-indigo-500/20 border border-white/10 animate-float">
+                <img src='https://opal.google/board/blobs/e914c4b2-0132-4284-a389-cc144c24c0a4' alt='Pop Music Trends Banner' class="w-full h-auto object-cover transform transition duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-32">
+        
+        <!-- Introduction -->
+        <section class="mb-24">
+            <div class="text-lg md:text-xl text-slate-300 leading-loose space-y-6 first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-brand-500">
+                <p>
+                    在這個耳機幾乎成為人類新器官的時代，我們每天在通勤、工作、甚至失眠的深夜裡，被無數段旋律包圍。你是否曾好奇，為什麼有些旋律聽一遍就再也揮之不去？為什麼阿公留下來的黑膠唱片，變成了手機裡每個月扣款 149 元的串流數據？
+                </p>
+                <p>
+                    今天，我們不聊艱澀的樂理，而是以一個知識份子的視角，輕鬆地拆解「流行音樂」這門最親民、卻也最複雜的藝術。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 1: Definition -->
+        <section class="mb-24">
+            <div class="section-marker mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">一、 到底什麼是「流行音樂」？</h2>
+                <p class="text-brand-500 font-medium">不只是收音機播的那些！</p>
+            </div>
+            
+            <div class="glass-card p-8 md:p-12 rounded-[2rem] border-l-4 border-brand-500">
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    在學術定義中，流行音樂（Popular Music）有別於結構嚴謹、需要門檻進入的「藝術音樂」（古典音樂），也不同於口耳相傳、帶有鄉土色彩的「傳統民間音樂」。它像是一場精確的社會實驗，核心目標只有一個：<span class="text-white font-semibold">走進大眾的感官。</span>
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <h4 class="text-brand-400 font-bold mb-3 flex items-center">
+                            <span class="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center mr-3 text-xs">01</span>
+                            「鉤子」 (Hook)
+                        </h4>
+                        <p class="text-sm text-slate-400">洗腦的吉他疊句或記憶點強的口號歌詞，讓你「一聽傾心」。</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/5">
+                        <h4 class="text-accent font-bold mb-3 flex items-center">
+                            <span class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center mr-3 text-xs">02</span>
+                            大眾的漢堡
+                        </h4>
+                        <p class="text-sm text-slate-400">高效、穩定，符合大多數人的胃口：簡單旋律、普世情感、抖腳節奏。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: History Bento -->
+        <section class="mb-24">
+            <div class="section-marker mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">二、 穿越時空聽音樂</h2>
+                <p class="text-brand-500 font-medium">流行樂的進化史</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Tin Pan Alley -->
+                <div class="col-span-12 md:col-span-7 glass-card p-8 rounded-3xl group hover:border-brand-500/50 transition-all">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 block">19 世紀末 · 錫盤巷</span>
+                    <h3 class="text-2xl font-bold mb-4 text-white">阿公時代的音樂工業</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">那時候想聽歌得買「樂譜」回家。詞曲作家在紐約錫盤巷大量生產易於彈唱的歌曲，開啟了流行音樂的工業化生產。</p>
+                </div>
+                
+                <!-- Rock & Roll -->
+                <div class="col-span-12 md:col-span-5 bg-gradient-to-br from-brand-600 to-brand-900 p-8 rounded-3xl shadow-xl transform md:translate-y-4">
+                    <span class="text-xs font-bold text-brand-200 uppercase tracking-widest mb-4 block">1950s · 搖滾風暴</span>
+                    <h3 class="text-2xl font-bold mb-4 text-white">反叛與青春</h3>
+                    <p class="text-indigo-100 text-sm leading-relaxed">電吉他點燃了青年文化，貓王與披頭四讓音樂與能量劃上等號。</p>
+                </div>
+
+                <!-- MTV era -->
+                <div class="col-span-12 md:col-span-5 bg-white/5 border border-white/10 p-8 rounded-3xl">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 block">1980s · 視覺動物</span>
+                    <h3 class="text-2xl font-bold mb-4 text-white">看見音樂的魅力</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">MTV 誕生，MJ 與瑪丹娜將聽覺延伸至極致的視覺展演。</p>
+                </div>
+
+                <!-- Digital Era -->
+                <div class="col-span-12 md:col-span-7 glass-card p-8 rounded-3xl border-b-4 border-accent">
+                    <span class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4 block">21 世紀 · 雲端革命</span>
+                    <h3 class="text-2xl font-bold mb-4 text-white">從收藏品到背景音</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">數位革命抹平門檻。我們不再買 CD，而是透過雲端存取全世界的曲庫，享受無所不在的便利。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Current State -->
+        <section class="mb-24 py-16 px-8 rounded-[3rem] bg-gradient-to-r from-brand-600/10 to-transparent border border-white/5">
+            <div class="section-marker mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">三、 現在大家都怎麼看？</h2>
+                <p class="text-brand-500 font-medium">數據與心理學的重塑</p>
+            </div>
+
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-16 h-16 shrink-0 rounded-2xl bg-brand-500/20 flex items-center justify-center text-brand-400">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">「演算法」成了你的新 DJ</h4>
+                        <p class="text-slate-400 leading-relaxed">現在決定一首歌紅不紅的，是 TikTok 或 Reels 上的 15 秒短片。旋律被簡化為短影音素材，結構也變得更急促直接。</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-16 h-16 shrink-0 rounded-2xl bg-accent/20 flex items-center justify-center text-accent">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">聽的是音樂，更是「心情」</h4>
+                        <p class="text-slate-400 leading-relaxed">流行音樂是現代人的心理避風港與社交通行證。你聽什麼歌，就代表你是什麼樣的人。</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-16 h-16 shrink-0 rounded-2xl bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white mb-2">數據為王的硬通貨</h4>
+                        <p class="text-slate-400 leading-relaxed">串流點擊率成為音樂人的價值標籤，流量決定了生存空間。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Controversy Cards -->
+        <section class="mb-24">
+            <div class="section-marker mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">四、 音樂圈的「真心話大冒險」</h2>
+                <p class="text-brand-500 font-medium">那些爭吵不休的話題</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1a1 1 0 112 0v1a1 1 0 11-2 0zM13.536 14.95a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM6.464 14.95a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414z"></path></svg>
+                    </div>
+                    <h5 class="text-xl font-bold text-white mb-4">藝術還是商品？</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">當一切都為了「耳蟲效應」服務，公式化生產是否讓靈魂逐漸抽離？</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h5 class="text-xl font-bold text-white mb-4">創作人的心酸</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">串流分潤對基層極不友善，月費微薄的背後，獨立音樂人的麵包在哪裡？</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zm-.464 5.535a1 1 0 10-1.415-1.414 3 3 0 01-4.242 0 1 1 0 00-1.415 1.414 5 5 0 007.072 0z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h5 class="text-xl font-bold text-white mb-4">AI 歌手搶飯碗</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">「AI 孫燕姿」震撼業界。當電腦能模仿情感，版權與創作主體性該如何定義？</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-3xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-30 transition-opacity">
+                        <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h5 class="text-xl font-bold text-white mb-4">被操縱的耳朵</h5>
+                    <p class="text-slate-400 text-sm leading-relaxed">品味是發自內心的喜愛，還是演算法餵食後的「自動導航」？</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future -->
+        <section class="mb-24">
+            <div class="section-marker mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">五、 未來的音樂，會變成什麼樣？</h2>
+                <p class="text-brand-500 font-medium">大膽想像未來藍圖</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+                <div class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-6">
+                    <div class="w-12 h-12 rounded-full border border-brand-500/50 flex items-center justify-center shrink-0 text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-all">1</div>
+                    <div>
+                        <h6 class="text-lg font-bold text-white">AI 深度協作</h6>
+                        <p class="text-slate-400 text-sm">從輔助混音到預測趨勢，AI 將成為每個人的專屬作曲夥伴。</p>
+                    </div>
+                </div>
+                <div class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-6">
+                    <div class="w-12 h-12 rounded-full border border-brand-500/50 flex items-center justify-center shrink-0 text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-all">2</div>
+                    <div>
+                        <h6 class="text-lg font-bold text-white">沉浸式體驗</h6>
+                        <p class="text-slate-400 text-sm">結合 VR 與 AR，你家客廳就是小巨蛋第一排，實現 3D 社交互動。</p>
+                    </div>
+                </div>
+                <div class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-6">
+                    <div class="w-12 h-12 rounded-full border border-brand-500/50 flex items-center justify-center shrink-0 text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-all">3</div>
+                    <div>
+                        <h6 class="text-lg font-bold text-white">「音樂語」的超全球化</h6>
+                        <p class="text-slate-400 text-sm">K-pop 只是開始，更多區域性曲風將佔據全球榜單。</p>
+                    </div>
+                </div>
+                <div class="group p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors flex items-center gap-6">
+                    <div class="w-12 h-12 rounded-full border border-brand-500/50 flex items-center justify-center shrink-0 text-brand-500 group-hover:bg-brand-500 group-hover:text-white transition-all">4</div>
+                    <div>
+                        <h6 class="text-lg font-bold text-white">聽眾也是創作者</h6>
+                        <p class="text-slate-400 text-sm">二次創作（Remix、短影音）讓聽眾也成為歌曲生命的一部分。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Thoughts -->
+        <section class="mt-32 pt-16 border-t border-white/10">
+            <div class="max-w-3xl mx-auto text-center">
+                <blockquote class="text-2xl md:text-3xl font-light italic text-slate-200 mb-10 leading-relaxed">
+                    「我們追的或許不是音樂，而是在這變遷快速的世界裡，尋找一絲能安放自己情感的節拍。」
+                </blockquote>
+                <p class="text-slate-400 leading-relaxed mb-12">
+                    流行音樂發展至今，或許真的從一種「藝術追求」轉變成了「大眾消費」。但回過頭來，無論載體如何更迭、無論是 AI 還是人類歌唱，每當那熟悉的副歌響起，我們感受到的那份共鳴——關於愛情、遺憾或狂歡——始終是真實存在的。
+                </p>
+                <div class="h-1 w-20 bg-gradient-to-r from-brand-500 to-accent mx-auto rounded-full"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Scroll-to-top (Floating Action Button style) -->
+    <div id="progress-container" class="fixed bottom-10 right-10 w-16 h-16 rounded-full bg-slate-900/80 border border-white/10 flex items-center justify-center cursor-pointer group hover:bg-brand-600 transition-all duration-300 z-50 shadow-2xl">
+        <svg class="w-6 h-6 text-white group-hover:scale-125 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        <svg class="absolute inset-0 w-full h-full -rotate-90">
+            <circle cx="32" cy="32" r="30" stroke="rgba(99, 102, 241, 0.2)" stroke-width="2" fill="none" class="w-16 h-16" style="cx: 32; cy: 32;"></circle>
+            <circle id="progress-ring" cx="32" cy="32" r="30" stroke="white" stroke-width="2" fill="none" stroke-dasharray="188.5" stroke-dashoffset="188.5" class="w-16 h-16" style="cx: 32; cy: 32; transition: stroke-dashoffset 0.1s;"></circle>
+        </svg>
+    </div>
+
+    <script>
+        // Progress Ring and Scroll to Top Logic
+        const ring = document.getElementById('progress-ring');
+        const container = document.getElementById('progress-container');
+        const circumference = 2 * Math.PI * 30;
+
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight));
+            const offset = circumference - (scrollPercent * circumference);
+            ring.style.strokeDashoffset = offset;
+        });
+
+        container.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
